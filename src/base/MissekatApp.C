@@ -1,6 +1,7 @@
 #include "MissekatApp.h"
 #include "Moose.h"
 #include "AppFactory.h"
+#include "MooseSyntax.h"
 #include "ModulesApp.h"
 
 template<>
@@ -49,6 +50,6 @@ MissekatApp::registerObjects(Factory & factory)
 // External entry point for dynamic syntax association
 extern "C" void MissekatApp__associateSyntax(Syntax & syntax, ActionFactory & action_factory) { MissekatApp::associateSyntax(syntax, action_factory); }
 void
-MissekatApp::associateSyntax(Syntax & syntax, ActionFactory & action_factory)
+MissekatApp::associateSyntax(Syntax & /*syntax*/, ActionFactory & /*action_factory*/)
 {
 }
